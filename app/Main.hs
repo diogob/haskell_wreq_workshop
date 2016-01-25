@@ -10,7 +10,9 @@ import Lib ( withToken
 main :: IO ()
 main = do
     story <- getStory authentication projectId storyId
-    print $ story ^. name
+    print "Story name should be printed"
+    -- When the funcions in the lib are defined you can uncomment the line bellow
+    -- print $ story ^. name
     where
       authentication = withToken "7f3f76bc6ae8c48e7b528369c999c8d8" defaults
       projectId = 1440520
