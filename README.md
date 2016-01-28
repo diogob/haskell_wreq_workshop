@@ -1,4 +1,4 @@
- # Workshop - From setting up stack to an API client library in one evening
+# Workshop - From setting up stack to an API client library in one evening
 
 This is an introductory workshop to get acquainted with parts of
 the Haskell tool-chain.
