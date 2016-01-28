@@ -19,7 +19,7 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.10 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.11
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
   default-language:    Haskell2010
@@ -31,7 +31,7 @@ executable api-exe
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.10 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.11
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
                      , api
@@ -44,7 +44,7 @@ test-suite api-test
   main-is:             Spec.hs
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.10 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.11
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
                      , api
