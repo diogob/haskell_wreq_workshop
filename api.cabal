@@ -19,11 +19,12 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.9.0.1 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
+                     , protolude >= 0.1.5 && < 0.2.0
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric
+  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
 
 executable api-exe
   hs-source-dirs:      app
@@ -31,12 +32,13 @@ executable api-exe
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.9.0.1 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
+                     , protolude >= 0.1.5 && < 0.2.0
                      , api
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric
+  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
 
 test-suite api-test
   type:                exitcode-stdio-1.0
@@ -44,13 +46,14 @@ test-suite api-test
   main-is:             Spec.hs
   build-depends:       base >= 4.7 && < 5
                      , wreq >= 0.4 && < 0.5
-                     , aeson >= 0.9.0.1 && < 0.11
+                     , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
+                     , protolude >= 0.1.5 && < 0.2.0
                      , api
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric
+  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
 
 source-repository head
   type:     git

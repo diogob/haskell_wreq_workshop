@@ -17,7 +17,7 @@ module Lib
     , name
     ) where
 
-
+import Protolude
 
 {-|
 Receives the API token and returns options that can be used to issue requests using it.
