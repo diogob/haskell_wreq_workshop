@@ -17,11 +17,15 @@ module Lib
     , name
     ) where
 
-import Protolude
+import Protolude hiding ((&))
+import Network.Wreq
+import Data.Aeson.Lens
+import Control.Lens
 
 {-|
 Receives the API token and returns options that can be used to issue requests using it.
 -}
+withToken :: ByteString -> Options
 withToken = undefined
 
 {-|
