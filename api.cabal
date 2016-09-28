@@ -22,9 +22,10 @@ library
                      , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
-                     , protolude >= 0.1.5 && < 0.2.0
+                     , bytestring >= 0.10.6 && < 0.11
+                     , text >= 1.2.2.1 && < 1.3
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
+  default-extensions:  OverloadedStrings
 
 executable api-exe
   hs-source-dirs:      app
@@ -35,10 +36,11 @@ executable api-exe
                      , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
-                     , protolude >= 0.1.5 && < 0.2.0
+                     , bytestring >= 0.10.6 && < 0.11
+                     , text >= 1.2.2.1 && < 1.3
                      , api
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
+  default-extensions:  OverloadedStrings
 
 test-suite api-test
   type:                exitcode-stdio-1.0
@@ -49,11 +51,12 @@ test-suite api-test
                      , aeson >= 0.9.0.1 && < 0.12
                      , lens >= 4.13 && < 4.14
                      , lens-aeson >= 1.0 && < 1.1
-                     , protolude >= 0.1.5 && < 0.2.0
+                     , bytestring >= 0.10.6 && < 0.11
+                     , text >= 1.2.2.1 && < 1.3
                      , api
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, DeriveGeneric, NoImplicitPrelude
+  default-extensions:  OverloadedStrings
 
 source-repository head
   type:     git

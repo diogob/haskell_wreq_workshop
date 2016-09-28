@@ -17,7 +17,10 @@ module Lib
     , name
     ) where
 
-import Protolude hiding ((&))
+import Data.Text (Text)
+import qualified Data.ByteString as BS
+import qualified Data.ByteString.Lazy as BL
+
 import Network.Wreq
 import Data.Aeson.Lens
 import Control.Lens
@@ -25,16 +28,23 @@ import Control.Lens
 {-|
 Receives the API token and returns options that can be used to issue requests using it.
 -}
-withToken :: ByteString -> Options
+withToken :: BS.ByteString -> Options
 withToken = undefined
 
 {-|
 Should receive options, a project id and a story id and returns a story.
 -}
+getStory :: (Show a, Show a1) =>
+            Options
+         -> a
+         -> a1
+         -> IO
+         (Response BL.ByteString)
 getStory = undefined
 
 {-|
 This is a getter that reads the story name.
 Should be used with the (^.) operator from the lens library.
 -}
+name :: AsValue b => Traversal' (Response b) Text
 name = undefined
